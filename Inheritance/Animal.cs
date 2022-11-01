@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Inheritance
 {
-    internal class Animal
+    public class Animal
     {
-        private readonly string Name;
+        public readonly string Name;
         private readonly int Age;
         private readonly string Gender;
         private readonly bool Legs;
@@ -20,22 +20,22 @@ namespace Inheritance
             Gender = _gender;
             Weight = _weight;
         }
-        public void AnimalInfo()
+        public virtual void AnimalInfo()
         {
-            Console.WriteLine($"Namn: {Name}\nÅlder: {Age}\nKön: {Gender}\nVikt: {Weight}");
+            Console.WriteLine($"Namn: {Name}\nÅlder: {Age}År\nKön: {Gender}\nVikt: {Weight}Kg");
             if (Legs) Console.WriteLine("Djuret har ben");
-            else Console.WriteLine("Djuret har inga ben");
+            else if (!Legs) Console.WriteLine("Djuret har inga ben");
+            else Console.WriteLine("Kan inte avgöra om djuret har ben");
         }
         public void Run()
         {
-            if (!Legs)
-            {
-                Console.WriteLine("Ditt djur har inga ben och kan därför inte gå eller springa");
-            }
-            else
-            {
-                Console.WriteLine("Ditt djur kan springa!");
-            }
+            if (!Legs) Console.WriteLine("Ditt djur har inga ben och kan därför inte gå eller springa");
+            else if (Legs) Console.WriteLine("Ditt djur kan springa!");
+            else Console.WriteLine("Kan inte avgöra om djuret kan springa eller ej");
+        }
+        public virtual void MakeSound()
+        {
+            Console.WriteLine("Suh dude");
         }
     }
 }
