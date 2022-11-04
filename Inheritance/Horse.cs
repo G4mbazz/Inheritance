@@ -14,7 +14,9 @@ namespace Inheritance
         public void Speed()
         {
             if (TopSpeed <= 50) Console.WriteLine("Din häst är tyvärr en av de långsammare hästarna med maxhastighet {0}km/h", TopSpeed);
-            else if (TopSpeed > 50 && TopSpeed < 55)Console.WriteLine("Din häst ");
+            else if (TopSpeed > 50 && TopSpeed < 55)Console.WriteLine("Denna hästens maxhastighet är {0}Km/h vilket är medelhastigheten för hästar", TopSpeed);
+            else if (TopSpeed > 55 && TopSpeed < 60) Console.WriteLine("En av dom snabbaste hästarna i världen asså {0}Km/h",TopSpeed);
+            else Console.WriteLine("Nytt världsrekord asså {0}Km/h!", TopSpeed);
         }
         public override void MakeSound()
         {

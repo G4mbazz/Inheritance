@@ -6,11 +6,11 @@ namespace Inheritance
 {
     public class Animal
     {
-        public readonly string Name;
-        private readonly int Age;
-        private readonly string Gender;
+        public readonly string Name = "";
+        private readonly int Age = 0;
+        private readonly string Gender = "";
         private readonly bool Legs;
-        private readonly int Weight;
+        private readonly int Weight = 0;
         
         public Animal(string _name, int _age, string _gender, bool _legs, int _weight)
         {
@@ -20,7 +20,7 @@ namespace Inheritance
             Gender = _gender;
             Weight = _weight;
         }
-        public virtual void AnimalInfo()
+        public void AnimalInfo()
         {
             Console.WriteLine($"Namn: {Name}\nÅlder: {Age}År\nKön: {Gender}\nVikt: {Weight}Kg");
             if (Legs) Console.WriteLine("Djuret har ben");
