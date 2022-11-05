@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Inheritance
 {
     public class Snek : Animal
     {
-        private readonly bool IsVenomous;
+        private readonly bool IsVenomous = true;
+        public Snek() : base()
+        {
+
+        }
         public Snek(string _name, int _age, string _gender, bool _legs, int _weight, bool _isVenomous) : base(_name, _age, _gender, _legs, _weight)
         {
             IsVenomous = _isVenomous;

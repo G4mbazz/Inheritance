@@ -1,12 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Inheritance
 {
     public class Horse : Animal
     {
-        private readonly int TopSpeed;
+        private readonly int TopSpeed = 0;
+        public Horse() : base()
+        {
+
+        }
         public Horse(string _name, int _age, string _gender, bool _legs, int _weight, int _topSpeed) : base(_name, _age, _gender, _legs, _weight)
         {
             TopSpeed = _topSpeed;
