@@ -17,6 +17,7 @@ namespace Inheritance
         {
             Console.WriteLine("Hund säger: Woof");
         }
+        //prints if the dog if allergy friendly or not
         public void Allergy()
         {
             if (AllergyFriendly) Console.WriteLine("Hunden är allergivänlig");

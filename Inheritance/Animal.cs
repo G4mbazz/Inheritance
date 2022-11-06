@@ -2,9 +2,10 @@
 
 namespace Inheritance
 {
+    //Parent class with 5 fields and 3 methods
     public class Animal
     {
-        public readonly string Name = "";
+        private readonly string Name = "";
         private readonly int Age = 0;
         private readonly string Gender = "";
         private readonly bool Legs = false;
@@ -22,17 +23,20 @@ namespace Inheritance
             Gender = _gender;
             Weight = _weight;
         }
+        //Printing the animals info to the console
         public void AnimalInfo()
         {
-            Console.WriteLine($"Namn: {Name}\nÅlder: {Age}År\nKön: {Gender}\nVikt: {Weight}Kg");
+            Console.WriteLine($"Namn: {Name}\nÅlder: {Age} År\nKön: {Gender}\nVikt: {Weight} Kg");
             if (Legs) Console.WriteLine("Djuret har ben");
             else Console.WriteLine("Djuret har inga ben");
         }
+        //Printing if the animal has legs or not
         public void Run()
         {
             if (!Legs) Console.WriteLine("Ditt djur har inga ben och kan därför inte gå eller springa");
             else Console.WriteLine("Ditt djur kan springa!");
         }
+        //Prints the animals sound to console
         public virtual void MakeSound()
         {
             Console.WriteLine("Suh dude");

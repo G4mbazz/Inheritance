@@ -13,6 +13,7 @@ namespace Inheritance
         {
             IsVenomous = _isVenomous;
         }
+        //Prints if the snake is venomous or not
         public void DoTCheck()
         {
             if (IsVenomous) Console.WriteLine("Ormen kan inte springa men du borde");
@@ -21,7 +22,7 @@ namespace Inheritance
 
         public override void MakeSound()
         {
-            Console.WriteLine("Ormen säger: Im a sssssssnake");
+            Console.WriteLine("Ormen väser");
         }
     }
 }
